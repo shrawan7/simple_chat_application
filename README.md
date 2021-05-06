@@ -2,7 +2,7 @@ Simple App Chat
 ===================
 
 
-Hey! Here is my first application using node.js (express) and socket.io. It is a simple **chat app**. 
+Hey! Here is my first application using node.js (express) and socket.io. It is a simple **chat app**. See live https://arcane-eyrie-29274.herokuapp.com/
 
 # Run App
 
