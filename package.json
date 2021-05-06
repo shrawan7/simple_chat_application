@@ -1,0 +1,26 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Simple chat app built with node.js and socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrawan7/simple_chat_application"
+  },
+  "author": "Shrawan Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrawan7/simple_chat_application/issues"
+  },
+  "homepage": "https://github.com/shrawan7/simple_chat_application#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.0.4"
+  }
+}
