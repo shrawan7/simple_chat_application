@@ -1,4 +1,3 @@
-
 $(function(){
 	var socket = io.connect()
 
@@ -13,13 +12,22 @@ $(function(){
 		socket.emit('new_message', {message : message.val()})
 	})
 
+	let counter = 0;
+
 	socket.on("new_message", (data) => {
 		feedback.html('');
 		message.val('');
-		chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>")
-	})
 
-	send_username.click(function(){
+		const backgroundColor = counter % 2 === 0 ? '#E5E4E2' : '#D3D3D3';
+		counter++;
+		chatroom.append("<p class='message' style='background-color: " + backgroundColor + "; padding: 10px; border-radius: 10px;'><span style='color: red;'>" + data.username + "</span>: " + data.message + "</p>");
+
+		//chatroom.append("<p class='message' style='background-color: " + backgroundColor + ";'><span style='color: red;'>" + data.username + "</span>: " + data.message + "</p>");
+	});
+
+	  
+
+	send_username.click(() => {
 		socket.emit('change_username', {username : username.val()})
 	})
 

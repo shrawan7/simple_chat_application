@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 	res.render('index')
 })
 
-server = app.listen(process.env.PORT || 8080)
+server = app.listen(process.env.PORT || 3000)
 
 const io = require("socket.io")(server)
 
@@ -26,3 +26,6 @@ io.on('connection', (socket) => {
     	socket.broadcast.emit('typing', {username : socket.username})
     })
 })
+
+
+

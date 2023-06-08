@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
-    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="style.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chatting Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-    <title>Chat App</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .chat-header {
+        background-color: #6c757d;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .chat-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .username-input {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .message-input {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <h1>Secret Chat</h1>
-    </header>
+    <div class="container">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>Secret Chat</h1>
+        </div>
 
-    <section>
-      <div id="change_username">
-	<input id="username" type="text" />
-	<button id="send_username" type="button">Change username</button>
+        <div id="change_username" class="username-input">
+          <div class="input-group">
+            <input id="username" type="text" class="form-control" placeholder="Enter username" />
+            <button id="send_username" type="button" class="btn btn-primary">Change username</button>
+          </div>
+        </div>
+
+        <div id="chatroom">
+          <div id="feedback"></div>
+        </div>
+
+        <div id="input_zone" class="message-input">
+          <div class="input-group">
+            <input id="message" type="text" class="form-control" placeholder="Type your message" />
+            <button id="send_message" type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <section id="chatroom">
-      <section id="feedback"></section>
-    </section>
-
-    
-
-    <section id="input_zone"> 
-      <input id="message" class="vertical-align" type="text"/>
-      <button id="send_message" class="vertical-align" type="button">Send</button>
-    </section>
+    </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
     <script src="chat.js"></script>
   </body>
 </html>
+
+
