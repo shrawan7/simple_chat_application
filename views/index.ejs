@@ -19,7 +19,7 @@
       }
 
       .chat-container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         background-color: #fff;
@@ -31,6 +31,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
+        margin-top: 5px;
       }
 
       .message-input {
@@ -38,6 +39,7 @@
         justify-content: center;
         margin-top: 20px;
       }
+
     </style>
   </head>
 
@@ -59,19 +61,27 @@
           <div id="feedback"></div>
         </div>
 
-        <div id="input_zone" class="message-input">
-          <div class="input-group">
-            <input id="message" type="text" class="form-control" placeholder="Type your message" />
-            <button id="send_message" type="button" class="btn btn-primary">Send</button>
+        <div class="input-group">
+          <input id="message" type="text" class="form-control" placeholder="Type your message" />
+          <div class="input-group-addon">
+            <label for="file" class="btn">
+              <i data-feather="paperclip"></i>
+            </label>
+          </div>
+          <input id="file" type="file" class="form-control" style="display: none;" />
+          <div class="btn" id="send_button">
+            <i data-feather="send"></i>
           </div>
         </div>
       </div>
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
     <script src="chat.js"></script>
   </body>
 </html>
-
-
