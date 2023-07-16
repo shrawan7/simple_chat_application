@@ -119,5 +119,5 @@ $(function () {
 			messageContent +
 			"</p>"
 	  	);
-	});
+	}); 
 });

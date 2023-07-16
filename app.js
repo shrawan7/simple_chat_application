@@ -17,7 +17,7 @@ io.on("connection", (socket) => {
 
   socket.on("change_username", (data) => {
     socket.username = data.username;
-  });
+  }); 
 
   socket.on("new_message", (data) => {
     if (data.type === "text") {
